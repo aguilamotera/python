@@ -46,8 +46,7 @@ cd carpetaApp
 code .
 ```
 Para ejecutar, click derecho en nuestro código, "Ejecutar archivo Python en la terminal".
-
-Pinchamos a la izquierda en Debug, y ahí encontraremos el botón Start Debugging.
+Para el debug, pinchamos a la izquierda en Debug, y ahí encontraremos el botón "Start Debugging".
 
 ```
 # Esto es un comentario corto igual que Bash
