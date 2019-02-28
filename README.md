@@ -420,3 +420,24 @@ unaFuncion()
 ```
 
 ## Clases
+```
+class MiClase():
+    def __init__(self):
+        sentencia
+        self.unAtributo = 5
+        sentencia
+    
+    def unMetodo(self):
+        sentencia
+
+miClase = MiClase()
+miClase.unMetodo()
+```
+## Herencia
+```
+class OtraClase(MiClase):
+    def __init__(self):
+        super().__init__()
+```
+
+
