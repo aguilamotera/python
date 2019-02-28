@@ -25,7 +25,7 @@ python3
 ```
 
 ## Ejecutar
-Primero creamos el archivo main.py y escribimos
+Creamos main.py
 ```
 print("hola mundo")
 ```
