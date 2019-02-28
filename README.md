@@ -29,7 +29,7 @@ Creamos main.py
 ```
 print("hola mundo")
 ```
-Abrimos una terminal y escribimos 
+Para ejecutar el código, abrimos una terminal y escribimos 
 ```
 python3 main.py
 ```
