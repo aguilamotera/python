@@ -5,6 +5,7 @@ https://www.python.org/downloads/
 
 - [Editores](#editores).
 - [Mostrar versión](#mostrar-versión).
+- [Ejecutar tu código](#ejecutar-tu-código).
 
 ## Editores
 |vscode
@@ -24,7 +25,7 @@ Menú Construir, Establecer comandos de construcción: Compile: python3 -m py_co
 python3
 ```
 
-## Ejecutar
+## Ejecutar tu código
 Creamos main.py
 ```
 print("hola mundo")
