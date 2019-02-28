@@ -67,11 +67,21 @@ largo
 
 ### Variables
 ```
-msg="una cadena "
-print(msg)
+varCadena="un texto "
 
-var = True
-var = False
+varLogica = True
+varLogica = False
+
+varLong = 0.5
+```
+
+### Expresiones aritméticas
+```
++, -, *, / # Operadores típicos
+5 ** 2 # Potencia
+5 + (4 * 2) 
+
+0.3 + 0.1 # long
 ```
 
 ### Expresiones lógicas
@@ -156,17 +166,11 @@ msg.strip()
 msg='hola 'que hace'
 
 
-+, -, *, / # Operadores típicos
 
-5 ** 2 # Potencia
-
-5 + (4 * 2) 
-
-0.3 + 0.1 # long
 
 ```
 
-## Estructura de datos
+## Estructuras de datos
 ```
 # El índice de una lista inicia en 0
 
