@@ -349,14 +349,73 @@ mostrarMsg(titulo='saludo', msg='hola')
 # Se puede utilizar return
 # Podemos retornar un diccionario
 # Los parametros opcionales es igual que el resto de lenguajes por ejemplo vb.
-# Se puede pasar una lista como parámetro y tened claro que el paso es por referencia
+# Se puede pasar una lista como argumento y tened claro que el paso es por referencia
 # El paso por valor de una lista es sencillo paramLista[:]
 ```
 
 ```
-# N argumentos 
-def miFuncion(*args):
+# N parámetros 
+def miFuncion(*params):
     sentencia
 
 miFuncion('a','b','c')
 ```
+
+```
+def miFuncion(**paramsKeyValor):
+    sentencia
+
+miFuncion(nombre='Juan', materia='Java')
+```
+
+```
+ficheroA.py
+
+ficheroB.py
+-----------
+import ficheroA
+
+ficheroA.unaFuncion()
+```
+
+```
+ficheroA.py
+
+ficheroB.py
+-----------
+from ficheroA import unaFuncion, otraFuncion
+
+unaFuncion()
+```
+
+```
+ficheroA.py
+
+ficheroB.py
+-----------
+from ficheroA import unaFuncion as uf
+
+uf()
+```
+
+```
+ficheroA.py
+
+ficheroB.py
+-----------
+import ficheroA as fa
+
+fa.unaFuncion()
+```
+
+```
+ficheroA.py
+
+ficheroB.py
+-----------
+from ficheroA import *
+
+unaFuncion()
+```
+
+## Clases
