@@ -26,7 +26,7 @@ Abrimos una terminal y escribimos python3 main.py
 
 ¡Guao!.
 
-Utilizaré vscode como editor y git de momento lo ire ejecutando desde la terminal.
+Utilizaré vscode como editor y sobre git al principio desde la terminal, luego desde el vscode.
 
 Después de instalar vscode, al abrir el editor nos mostrará la pestaña Welcome, Customize, Tools and language, Install support for Python (picamos ahí); abrimos la paleta de comandos y escribiemos "shell command" para que desde la terminal podamos abrir el vscode escribiendo code .
 ```
