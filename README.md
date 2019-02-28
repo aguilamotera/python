@@ -51,6 +51,43 @@ largo
 msg="una cadena "
 print(msg)
 
+var='cat'
+if var == 'cat':
+    print('Categoría')
+else:
+    print('Autor')
+
+# La comparación es sencible a Mayúsculas y Minúsculas.
+
+!= # Distinto
+<  # Menor que
+<= # Obvio
+>  
+>=
+
+and 
+or
+
+var in miLista # Obvio
+var not in miLIsta
+
+var = True
+var = False
+
+if condicion:
+    sentencia
+elif:
+    sentencia
+else:
+    sentencia
+
+# Si la lista no es empty
+miLista = []
+if miLista:
+    sentencia
+else:
+    setnencia
+
 #Mayúscula principio de cada palabra
 print(msg.title())
 
@@ -133,5 +170,39 @@ for num in miLista[:3]:
 miLista2 = miLista[:] # Equivalente a copiar la lista.
 
 #Tuplas
+# Las tuplas son estáticas.
+#Para definir una tubla se utilizan los paréntesis
+miTupla = (200, 300)
+print(miTupla[0])
+miTupla[0] = 4 # ¡Ojo!, no se puede porque la tupla es estática, que ya no se puede modificar.
+
+for num in miTupla:
+    print(num)
+
+miTupla = ('a')
+miTupla = ('b') #Obvio
+
+#Diccionarios
+#------------
+# Equivalente a arrays asociativos, hashtable, diccionarios de vb.
+# Son pares keys-valor
+
+miDic = {} # Diccionario vacío
+miDic = {'nombre':'Marco', 'edad': 20}
+miDic['nombre']
+miDic['edad']=19
+miDic['telefono']=0
+del miDic['telefono']
+
+miDic = {
+    'nombre': 'Marco',
+    'edad': 20,
+    'telefono': 0
+}
+
+# Me suena al foreach de PHP
+for k, v in miDic.items():
+    print(k)
+    print(v)
 
 ```
