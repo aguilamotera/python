@@ -116,6 +116,10 @@ or
 varCadena.title() #Mayúscula principio de cada palabra
 varCadena.upper()
 varCadena.lower()
+varCadena.rstrip() # Quitar espacio en blanco por la derecha.
+varCadena.lstrip()
+varCadena.strip() # Equivalente al trim.
+
 ```
 
 ## Entrada y salida de información
@@ -132,6 +136,24 @@ respuesta = int(respuesta)
 # Para la versión 2 el input es raw_input()
 
 print('hola mundo')
+
+# Obvio que da error.
+varCadena='hola 'que hace'
+
+# Concatenación es como en Java con "+"
+# Otra manera
+var = "a "
+var += "b"
+
+#\n \t
+```
+
+## Casting
+```
+int(unaCadena)
+str(unNumero)
+
+str(num) #Cast int a String
 ```
 
 ## Estructuras selectivas
@@ -152,7 +174,6 @@ if miLista:
     sentencia
 else:
     sentencia
-
 ```
 
 ## Estructuras repetitivas
@@ -170,28 +191,6 @@ while 'unValorRepe' in miLista:
 # sino a conocimiento.
 # En Python tenemos break pero mejor no utilizarlo.
 # continue
-
-# Concatenación es como en Java con "+"
-# Otra manera
-var = "a "
-var += "b"
-
-#\n \t
-
-# Quitar espacio en blanco por la derecha.
-msg.rstrip()
-
-# Obvio
-msg.lstrip()
-
-# Equivalente al trim.
-msg.strip()
-
-# Obvio que da error.
-msg='hola 'que hace'
-
-
-
 
 ```
 
@@ -319,15 +318,6 @@ miDic = {
 
 # Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
-```
-### Casting
-```
-# Casting
-int(unaCadena)
-str(unNumero)
-
-#Cast int a String
-str(num)
 ```
 
 ## Funciones
