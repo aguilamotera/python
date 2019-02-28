@@ -64,6 +64,7 @@ else:
 <= # Obvio
 >  
 >=
+%  # Operador módulo 20 % 5
 
 and 
 or
@@ -87,6 +88,24 @@ if miLista:
     sentencia
 else:
     setnencia
+
+# Casting
+int(unaCadena)
+str(unNumero)
+
+while condicion:
+    sentencia
+
+while miLista:
+    sentencia
+
+while 'unValorRepe' in miLista:
+    miLista.remove('unValorRepe')
+
+# Se pueden utilizar flags o sentinelas pero esto no pertenece al lenguaje
+# sino a conocimiento.
+# En Python tenemos break pero mejor no utilizarlo.
+# continue
 
 #Mayúscula principio de cada palabra
 print(msg.title())
@@ -246,13 +265,15 @@ miDic = {
 }
 
 # Entrada de texto y númerica
-# Al ejecutar desde la terminal externa tened en cuenta que escribamos
+# Al ejecutar desde la terminal externa tened cuidado que escribamos
 # python3 main.py
 respuesta = input("Introduzca la opción correcta: ")
 print(respuesta)
 
 # Para casos de enteros
 respuesta = int(respuesta)
+
+# Para la versión 2 el input es raw_input()
 
 # Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
