@@ -107,9 +107,25 @@ or
 
 ### Funciones internas
 ```
-msg.title() #Mayúscula principio de cada palabra
-msg.upper()
-msg.lower()
+varCadena.title() #Mayúscula principio de cada palabra
+varCadena.upper()
+varCadena.lower()
+```
+
+### Entrada y salida de información
+```
+print('hola mundo')
+
+# Entrada de texto y númerica
+# Al ejecutar desde la terminal externa tened cuidado que escribamos
+# python3 main.py
+respuesta = input("Introduzca la opción correcta: ")
+print(respuesta)
+
+# Para casos de enteros
+respuesta = int(respuesta)
+
+# Para la versión 2 el input es raw_input()
 ```
 
 ## Estructuras selectivas
@@ -294,17 +310,6 @@ miDic = {
         'nombre':'Valentín'
     }
 }
-
-# Entrada de texto y númerica
-# Al ejecutar desde la terminal externa tened cuidado que escribamos
-# python3 main.py
-respuesta = input("Introduzca la opción correcta: ")
-print(respuesta)
-
-# Para casos de enteros
-respuesta = int(respuesta)
-
-# Para la versión 2 el input es raw_input()
 
 # Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
