@@ -24,7 +24,9 @@ print("hola mundo")
 ```
 Abrimos una terminal y escribimos python3 main.py
 
-¡Guao!, utilizaré vscode como editor.
+¡Guao!.
+
+Utilizaré vscode como editor y git de momento lo ire ejecutando desde la terminal.
 
 Después de instalar vscode, al abrir el editor nos mostrará la pestaña Welcome, Customize, Tools and language, Install support for Python (picamos ahí); abrimos la paleta de comandos y escribiemos "shell command" para que desde la terminal podamos abrir el vscode escribiendo code .
 ```
@@ -46,7 +48,7 @@ largo
 """
 
 # Variables
-msg="una cadena"
+msg="una cadena "
 print(msg)
 
 #Mayúscula principio de cada palabra
@@ -56,4 +58,15 @@ msg.upper()
 msg.lower()
 
 #Concatenación es como en Java con "+"
+
+#\n \t
+
+#Quitar espacio en blanco por la derecha.
+msg.rstrip()
+
+# Obvio
+msg.lstrip()
+
+# Equivalente al trim.
+msg.strip()
 ```
