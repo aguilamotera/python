@@ -6,6 +6,7 @@ https://www.python.org/downloads/
 - [Editores](#editores).
 - [Mostrar versión](#mostrar-versión).
 - [Ejecutar tu código](#ejecutar-tu-código).
+- [Estructura general](#estructura-general).
 - [Estructuras selectivas](#estructuras-selectivas).
 - [Estructuras repetitivas](#estructuras-repetitivas).
 - [Estructuras de datos](#estructuras-de-datos).
