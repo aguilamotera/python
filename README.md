@@ -89,10 +89,6 @@ if miLista:
 else:
     setnencia
 
-# Casting
-int(unaCadena)
-str(unNumero)
-
 while condicion:
     sentencia
 
@@ -140,9 +136,6 @@ msg='hola 'que hace'
 5 + (4 * 2) 
 
 0.3 + 0.1 # long
-
-#Cast int a String
-str(num)
 
 # El índice de una lista inicia en 0
 
@@ -277,6 +270,15 @@ respuesta = int(respuesta)
 
 # Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
+```
+### Casting
+```
+# Casting
+int(unaCadena)
+str(unNumero)
+
+#Cast int a String
+str(num)
 ```
 
 ### Funciones
