@@ -1,6 +1,11 @@
 # python
 https://www.python.org/downloads/
 
+## Tabla de contenido
+
+- [Mostrar versión](#mostrar-version).
+- [Editores](#editores).
+
 ### Mostrar versión
 $ python3
 
@@ -281,7 +286,7 @@ str(unNumero)
 str(num)
 ```
 
-### Funciones
+## Funciones
 ```
 def mostrarMsg(msg):
     sentencia
