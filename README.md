@@ -51,15 +51,20 @@ code .
 Para ejecutar, click derecho en nuestro código, "Ejecutar archivo Python en la terminal".
 Para el debug, pinchamos a la izquierda en Debug, y ahí encontraremos el botón "Start Debugging".
 
+## Estructura general
+### Comentario corto
 ```
-# Esto es un comentario corto igual que Bash
-
-# Comentario largo
+#Esto es un comentario corto igual que Bash
+```
+### Comentario largo
+```
 """
 comentario 
 largo
 """
+```
 
+```
 # Variables
 msg="una cadena "
 print(msg)
