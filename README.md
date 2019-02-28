@@ -94,11 +94,14 @@ print(msg.title())
 msg.upper()
 msg.lower()
 
-#Concatenación es como en Java con "+"
+# Concatenación es como en Java con "+"
+# Otra manera
+var = "a "
+var += "b"
 
 #\n \t
 
-#Quitar espacio en blanco por la derecha.
+# Quitar espacio en blanco por la derecha.
 msg.rstrip()
 
 # Obvio
@@ -169,9 +172,9 @@ for num in miLista[:3]:
 
 miLista2 = miLista[:] # Equivalente a copiar la lista.
 
-#Tuplas
+# Tuplas
 # Las tuplas son estáticas.
-#Para definir una tubla se utilizan los paréntesis
+# Para definir una tubla se utilizan los paréntesis
 miTupla = (200, 300)
 print(miTupla[0])
 miTupla[0] = 4 # ¡Ojo!, no se puede porque la tupla es estática, que ya no se puede modificar.
@@ -182,10 +185,10 @@ for num in miTupla:
 miTupla = ('a')
 miTupla = ('b') #Obvio
 
-#Diccionarios
+# Diccionarios
 #------------
 # Equivalente a arrays asociativos, hashtable, diccionarios de vb.
-# Son pares keys-valor
+# Son pares key-valor
 
 miDic = {} # Diccionario vacío
 miDic = {'nombre':'Marco', 'edad': 20}
@@ -219,5 +222,38 @@ for v in set(miDic.values()):
     print(v)
 
 # Nesting, anidación.
+
+persona0 = {'nombre':'Esteban'}
+persona1 = {'nombre':'Juan'}
+personas = [persona0, persona1]
+for persona in personas:
+    print(persona)
+
+persona=[]
+
+miDic = {
+    'nombre': 'Juan',
+    'asignaturas':['Java', 'XML']
+}
+
+miDic = {
+    'ID001':{
+        'nombre':'Pablo'
+    },
+    'ID002':{
+        'nombre':'Valentín'
+    }
+}
+
+# Entrada de texto y númerica
+# Al ejecutar desde la terminal externa tened en cuenta que escribamos
+# python3 main.py
+respuesta = input("Introduzca la opción correcta: ")
+print(respuesta)
+
+# Para casos de enteros
+respuesta = int(respuesta)
+
+# Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
 ```

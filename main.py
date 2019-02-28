@@ -1,3 +1,4 @@
 
-miLista = ['a', 'b', 'c']
-print(miLista[-2:])
+
+respuesta = input("Introduzca la opción correcta: ")
+print(respuesta)
