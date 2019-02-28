@@ -69,6 +69,9 @@ largo
 ```
 msg="una cadena "
 print(msg)
+
+var = True
+var = False
 ```
 
 ### Expresiones lógicas
@@ -87,12 +90,6 @@ print(msg)
 ```
 and 
 or
-
-var in miLista # Obvio
-var not in miLIsta
-
-var = True
-var = False
 ```
 
 ## Estructuras selectivas
@@ -105,6 +102,8 @@ elif:
 else:
     sentencia
 
+var in miLista # Obvio
+var not in miLIsta
 
 # Si la lista no es empty
 miLista = []
