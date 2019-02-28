@@ -343,18 +343,20 @@ def mostrarMsg(msg, titulo):
 
 mostrarMsg(msg='hola', titulo='saludo')
 mostrarMsg(titulo='saludo', msg='hola')
+```
 
+```
 # Se puede utilizar return
 # Podemos retornar un diccionario
 # Los parametros opcionales es igual que el resto de lenguajes por ejemplo vb.
 # Se puede pasar una lista como parámetro y tened claro que el paso es por referencia
 # El paso por valor de una lista es sencillo paramLista[:]
+```
 
+```
 # N argumentos 
 def miFuncion(*args):
     sentencia
 
 miFuncion('a','b','c')
-
-
 ```
