@@ -65,26 +65,26 @@ largo
 """
 ```
 
+### Variables
 ```
-# Variables
 msg="una cadena "
 print(msg)
+```
 
-var='cat'
-if var == 'cat':
-    print('Categoría')
-else:
-    print('Autor')
-
-# La comparación es sencible a Mayúsculas y Minúsculas.
-
+### Expresiones lógicas
+#### Operadores de relación
+```
+== # La comparación es sencible a Mayúsculas y Minúsculas.
 != # Distinto
 <  # Menor que
 <= # Obvio
 >  
 >=
 %  # Operador módulo 20 % 5
+```
 
+#### Operadores lógicos
+```
 and 
 or
 
@@ -104,6 +104,7 @@ elif:
     sentencia
 else:
     sentencia
+
 
 # Si la lista no es empty
 miLista = []
