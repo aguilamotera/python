@@ -3,7 +3,7 @@ https://www.python.org/downloads/
 
 ## Tabla de contenido
 
-- [Mostrar versión](#mostrar-version).
+- [Mostrar versión](#mostrar-versión).
 - [Editores](#editores).
 
 ### Mostrar versión
