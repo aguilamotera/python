@@ -123,15 +123,8 @@ varCadena.strip() # Equivalente al trim.
 ```
 
 ## Entrada y salida de información
-Al ejecutar desde la terminal externa tened cuidado que escribamos
+Entrada de texto y númerica
 ```
-# python3 main.py
-```
-
-```
-# Entrada de texto y númerica
-# Al ejecutar desde la terminal externa tened cuidado que escribamos
-# python3 main.py
 respuesta = input("Introduzca la opción correcta: ")
 print(respuesta)
 
@@ -139,7 +132,10 @@ print(respuesta)
 respuesta = int(respuesta)
 
 # Para la versión 2 el input es raw_input()
+```
 
+Salida
+```
 print('hola mundo')
 
 # Obvio que da error.
