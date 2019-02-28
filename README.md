@@ -6,8 +6,14 @@ https://www.python.org/downloads/
 - [Editores](#editores).
 - [Mostrar versión](#mostrar-versión).
 - [Ejecutar tu código](#ejecutar-tu-código).
-- [Estructura general](#estructura-general).
-- [Estructuras selectivas](#estructuras-selectivas).
+- [Comentario corto](#comentario-corto).
+- [Comentario largo](#comentario-largo).
+- [Variables](#variables).
+- [Expresiones aritméticas](#expresiones-aritméticas).
+- [Operadores de relación](#operadores-de-relación).
+- [Operadores lógicos](#operadores-lógicos).
+- [Funciones internas](#funciones-internas).
+- [Entrada y salida de la información](#entrada-y-salida-de-la-información).
 - [Estructuras repetitivas](#estructuras-repetitivas).
 - [Estructuras de datos](#estructuras-de-datos).
 
@@ -52,12 +58,13 @@ code .
 Para ejecutar, click derecho en nuestro código, "Ejecutar archivo Python en la terminal".
 Para el debug, pinchamos a la izquierda en Debug, y ahí encontraremos el botón "Start Debugging".
 
-## Estructura general
-### Comentario corto
+
+## Comentario corto
 ```
 #Esto es un comentario corto igual que Bash
 ```
-### Comentario largo
+
+## Comentario largo
 ```
 """
 comentario 
@@ -65,7 +72,7 @@ largo
 """
 ```
 
-### Variables
+## Variables
 ```
 varCadena="un texto "
 
@@ -75,7 +82,7 @@ varLogica = False
 varLong = 0.5
 ```
 
-### Expresiones aritméticas
+## Expresiones aritméticas
 ```
 +
 -
@@ -87,8 +94,7 @@ varLong = 0.5
 0.3 + 0.1 # long
 ```
 
-### Expresiones lógicas
-#### Operadores de relación
+## Operadores de relación
 ```
 == # La comparación es sencible a Mayúsculas y Minúsculas.
 != # Distinto
@@ -99,23 +105,21 @@ varLong = 0.5
 %  # Operador módulo 20 % 5
 ```
 
-#### Operadores lógicos
+## Operadores lógicos
 ```
 and 
 or
 ```
 
-### Funciones internas
+## Funciones internas
 ```
 varCadena.title() #Mayúscula principio de cada palabra
 varCadena.upper()
 varCadena.lower()
 ```
 
-### Entrada y salida de información
+## Entrada y salida de información
 ```
-print('hola mundo')
-
 # Entrada de texto y númerica
 # Al ejecutar desde la terminal externa tened cuidado que escribamos
 # python3 main.py
@@ -126,6 +130,8 @@ print(respuesta)
 respuesta = int(respuesta)
 
 # Para la versión 2 el input es raw_input()
+
+print('hola mundo')
 ```
 
 ## Estructuras selectivas
