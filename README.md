@@ -126,4 +126,12 @@ miLista[0:3] # Retorna una lista desde el elemento 0 al 2
 miLista[:3] # Obvio
 miLista[1:] # Obvio
 miLista[-3:] # Índice negativo, cuento de derecha a izquierda como quien lee un manga, tercer índice hasta n.
+
+for num in miLista[:3]:
+    print(num)
+
+miLista2 = miLista[:] # Equivalente a copiar la lista.
+
+#Tuplas
+
 ```
