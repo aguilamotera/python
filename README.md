@@ -278,3 +278,11 @@ respuesta = int(respuesta)
 # Hasta aquí queda pendiente investigar si se crean zoombies, pero lo dejo para luego.
 
 ```
+
+### Funciones
+```
+def mostrarMsg(msg):
+    sentencia
+
+mostrarMsg('hola')
+```
