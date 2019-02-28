@@ -77,10 +77,13 @@ varLong = 0.5
 
 ### Expresiones aritméticas
 ```
-+, -, *, / # Operadores típicos
++
+-
+*
+/ 
 5 ** 2 # Potencia
-5 + (4 * 2) 
 
+5 + (4 * 2) 
 0.3 + 0.1 # long
 ```
 
