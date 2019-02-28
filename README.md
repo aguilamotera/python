@@ -6,7 +6,9 @@ https://www.python.org/downloads/
 - [Editores](#editores).
 - [Mostrar versión](#mostrar-versión).
 - [Ejecutar tu código](#ejecutar-tu-código).
-- [Estructuras de control](#estructuras-de-control).
+- [Estructuras selectivas](#estructuras-selectivas).
+- [Estructuras repetitivas](#estructuras-repetitivas).
+- [Estructuras de datos](#estructuras-de-datos).
 
 ## Editores
 |vscode
@@ -87,7 +89,7 @@ var = True
 var = False
 ```
 
-## Estructuras de control
+## Estructuras selectivas
 
 ```
 if condicion:
@@ -104,6 +106,10 @@ if miLista:
 else:
     setnencia
 
+```
+
+## Estructuras repetitivas
+```
 while condicion:
     sentencia
 
@@ -152,6 +158,10 @@ msg='hola 'que hace'
 
 0.3 + 0.1 # long
 
+```
+
+## Estructura de datos
+```
 # El índice de una lista inicia en 0
 
 miLista = [1, 2, 3]
