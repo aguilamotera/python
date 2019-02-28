@@ -105,7 +105,7 @@ and
 or
 ```
 
-#### Funciones internas
+### Funciones internas
 ```
 msg.title() #Mayúscula principio de cada palabra
 msg.upper()
