@@ -25,11 +25,14 @@ python3
 ```
 
 ## Ejecutar
-Por ejemplo creamos el archivo main.py 
+Primero creamos el archivo main.py y escribimos
 ```
 print("hola mundo")
 ```
-Abrimos una terminal y escribimos python3 main.py
+Abrimos una terminal y escribimos 
+```
+python3 main.py
+```
 
 ¡Guao!.
 
