@@ -205,4 +205,19 @@ for k, v in miDic.items():
     print(k)
     print(v)
 
+for k in miDic.keys():
+    print(k)
+
+for k in sorted(miDic.keys()):
+    print(k)  
+
+for v in miDic.values():
+    print(v)
+
+# Si el valor está reptido no lo vuelve a mostrar
+for v in set(miDic.values()):
+    print(v)
+
+# Nesting, anidación.
+
 ```
