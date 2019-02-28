@@ -1,3 +1,3 @@
 
 miLista = ['a', 'b', 'c']
-print(miLista[1])
+print(miLista[-2:])

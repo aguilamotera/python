@@ -85,7 +85,18 @@ msg='hola 'que hace'
 #Cast int a String
 str(num)
 
-# Inicia en 0
+# El índice de una lista inicia en 0
+
+miLista = [1, 2, 3]
+min(miLista)
+max(miLista)
+sum(miLista)
+
+miLista = list(range(1,6)) # Valor de los elementos 1 hasta 5
+miLista = lista(range(2,7,2)) # Lo mismo, pero de 2 en dos
+miLista = [num**2 for num in range(1,3)] # Primero, que valor tiene num en el for, resp 1, potencia de 1 es 1, etc.
+
+miLista=[] #Lista vacía.
 miLista = ['a', 'b', 'c']
 print(miLista)
 print(miLista[1])
@@ -102,4 +113,17 @@ miLista.sort(reverse=True)
 sorted(miLista) # Para mantener la lista intacta, retorna la lista aplicando sort.
 miLista.reverse() # No se trata de ordenar más bien de que el orden de los elementos vaya al revés.
 len(miLista)
+
+for elemento in miLista:
+    print(elemento)
+    print('\nlo que sea\n')  #Esta línea está dentro del for, lo sé por la identación.
+
+# Desde 1 hasta 4
+for num in range(1,5):
+    print(num)
+
+miLista[0:3] # Retorna una lista desde el elemento 0 al 2
+miLista[:3] # Obvio
+miLista[1:] # Obvio
+miLista[-3:] # Índice negativo, cuento de derecha a izquierda como quien lee un manga, tercer índice hasta n.
 ```
