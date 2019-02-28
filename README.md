@@ -288,12 +288,17 @@ def mostrarMsg(msg):
 
 mostrarMsg('hola')
 mostrarMsg(msg='hola')
+```
 
+Función con parámetro opcional
+```
 def mostrarMsg(msg, titulo='valorPorDefecto'):
-    setnencia
+    sentencia
 
 mostrarMsg(msg='hola')
+```
 
+```
 def mostrarMsg(msg, titulo):
     sentencia
 
