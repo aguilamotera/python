@@ -105,8 +105,14 @@ and
 or
 ```
 
-## Estructuras selectivas
+#### Funciones internas
+```
+msg.title() #Mayúscula principio de cada palabra
+msg.upper()
+msg.lower()
+```
 
+## Estructuras selectivas
 ```
 if condicion:
     sentencia
@@ -123,7 +129,7 @@ miLista = []
 if miLista:
     sentencia
 else:
-    setnencia
+    sentencia
 
 ```
 
@@ -142,12 +148,6 @@ while 'unValorRepe' in miLista:
 # sino a conocimiento.
 # En Python tenemos break pero mejor no utilizarlo.
 # continue
-
-#Mayúscula principio de cada palabra
-print(msg.title())
-
-msg.upper()
-msg.lower()
 
 # Concatenación es como en Java con "+"
 # Otra manera
