@@ -6,6 +6,7 @@ https://www.python.org/downloads/
 - [Editores](#editores).
 - [Mostrar versión](#mostrar-versión).
 - [Ejecutar tu código](#ejecutar-tu-código).
+- [Estructuras de control](#estructuras-de-control).
 
 ## Editores
 |vscode
@@ -84,7 +85,11 @@ var not in miLIsta
 
 var = True
 var = False
+```
 
+## Estructuras de control
+
+```
 if condicion:
     sentencia
 elif:
