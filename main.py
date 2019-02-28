@@ -1,10 +1,3 @@
 
-print("hola mundo")
-print("jeje")
-msg="hola que hace tronco"
-print(msg)
-
-print(msg.title())
-
-msg='hola 'que hace ''
-print(msg)
+miLista = ['a', 'b', 'c']
+print(miLista[1])

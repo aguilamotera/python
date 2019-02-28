@@ -79,4 +79,27 @@ msg='hola 'que hace'
 5 ** 2 # Potencia
 
 5 + (4 * 2) 
+
+0.3 + 0.1 # long
+
+#Cast int a String
+str(num)
+
+# Inicia en 0
+miLista = ['a', 'b', 'c']
+print(miLista)
+print(miLista[1])
+miLista[-1] #Primer elemento desde la derecha.
+miLista[0]='A'
+miLista.append('d')
+miLista.insert(0, 'aa')
+del miLista[0]
+miLista.pop() # Quita el elemento -1 a la lista y retorna el elemento quitado 
+miLista.pop(0) # Obvio
+miLista.remove('c')
+miLista.sort()
+miLista.sort(reverse=True)
+sorted(miLista) # Para mantener la lista intacta, retorna la lista aplicando sort.
+miLista.reverse() # No se trata de ordenar más bien de que el orden de los elementos vaya al revés.
+len(miLista)
 ```
