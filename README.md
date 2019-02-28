@@ -123,6 +123,11 @@ varCadena.strip() # Equivalente al trim.
 ```
 
 ## Entrada y salida de información
+Al ejecutar desde la terminal externa tened cuidado que escribamos
+```
+# python3 main.py
+```
+
 ```
 # Entrada de texto y númerica
 # Al ejecutar desde la terminal externa tened cuidado que escribamos
