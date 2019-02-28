@@ -5,3 +5,6 @@ msg="hola que hace tronco"
 print(msg)
 
 print(msg.title())
+
+msg='hola 'que hace ''
+print(msg)
