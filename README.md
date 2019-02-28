@@ -3,11 +3,8 @@ https://www.python.org/downloads/
 
 ## Tabla de contenido
 
-- [Mostrar versión](#mostrar-versión).
 - [Editores](#editores).
-
-### Mostrar versión
-$ python3
+- [Mostrar versión](#mostrar-versión).
 
 ## Editores
 |vscode
@@ -21,6 +18,10 @@ Instalar plugin, "Python 2019.2.5433, Linting, Debuggin ...", Install, Reload.
 | https://www.geany.org/Download/Releases
 
 Menú Construir, Establecer comandos de construcción: Compile: python3 -m py_compile "%f", Execute: python3 "%f"
+
+
+### Mostrar versión
+$ python3
 
 ## Ejecutar
 Por ejemplo creamos el archivo main.py 
