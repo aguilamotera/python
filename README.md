@@ -19,8 +19,7 @@ Instalar plugin, "Python 2019.2.5433, Linting, Debuggin ...", Install, Reload.
 
 Menú Construir, Establecer comandos de construcción: Compile: python3 -m py_compile "%f", Execute: python3 "%f"
 
-
-### Mostrar versión
+## Mostrar versión
 $ python3
 
 ## Ejecutar
