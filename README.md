@@ -80,6 +80,15 @@ varLogica = True
 varLogica = False
 
 varLong = 0.5
+
+varCadena='hola 'que hace' # Obvio que da error.
+
+# Concatenación es como en Java con "+"
+# Otra manera
+varCadena = "a "
+varCadena += "b"
+
+\n \t
 ```
 
 ## Expresiones aritméticas
@@ -137,16 +146,6 @@ respuesta = int(respuesta)
 Salida
 ```
 print('hola mundo')
-
-# Obvio que da error.
-varCadena='hola 'que hace'
-
-# Concatenación es como en Java con "+"
-# Otra manera
-var = "a "
-var += "b"
-
-#\n \t
 ```
 
 ## Casting
