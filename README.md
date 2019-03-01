@@ -128,7 +128,7 @@ varCadena.lower()
 varCadena.rstrip() # Quitar espacio en blanco por la derecha.
 varCadena.lstrip()
 varCadena.strip() # Equivalente al trim.
-
+varCadena.replace('objetivo', 'destino')
 ```
 
 ## Entrada y salida de información
@@ -468,4 +468,35 @@ class OtraClase(MiClase):
         otraSentencia
 ```
 
+## Archivos y excepcciones
+```
+with open('libros.dat') as objArchivo:
+    contenido=objArchivo.read()
+```
+
+```
+with open('libros.dat') as objArchivo:
+    for linea in objArchivo:
+        sentencia
+```
+
+```
+with open('libros.dat') as objArchivo:
+    lineas = objArchivo.readLines()
+
+for linea in lineas:
+    sentencia
+```
+
+r -> modo lectura
+
+w -> modo escritura
+
+a -> modo append
+
+r+ -> modo lectura y escritura
+```
+with open('libros.dat', 'w') as objArchivo:
+    objArchivo.write("Escribiendo en un archivo")
+```
 
