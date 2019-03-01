@@ -435,9 +435,37 @@ miClase.unMetodo()
 ```
 ## Herencia
 ```
+class MiClase():
+    def __init__(self):
+        sentencia
+        self.unAtributo = 5
+        sentencia
+    
+    def unMetodo(self):
+        sentencia
+
 class OtraClase(MiClase):
     def __init__(self):
         super().__init__()
+```
+
+### Overriding
+```
+class MiClase():
+    def __init__(self):
+        sentencia
+        self.unAtributo = 5
+        sentencia
+    
+    def unMetodo(self):
+        sentencia
+
+class OtraClase(MiClase):
+    def __init__(self):
+        super().__init__()
+    
+    def unMetodo(self):
+        otraSentencia
 ```
 
 
