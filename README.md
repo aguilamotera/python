@@ -488,9 +488,9 @@ for linea in lineas:
     sentencia
 ```
 
-r -> modo lectura, modo por defecto.
-w -> modo escritura.
-a -> modo append.
+r -> modo lectura, modo por defecto.  
+w -> modo escritura.  
+a -> modo append.  
 r+ -> modo lectura y escritura.
 ```
 with open('libros.dat', 'w') as objArchivo:
