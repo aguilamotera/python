@@ -528,3 +528,34 @@ else:
     sentencia
 ```
 
+## Pruebas initarias
+assertEqual(a,b) a == b  
+assertNotEqual(a, b) a != b  
+assertTrue(x) bool(x) es True  
+assertFalse(x) bool(x) es False  
+assertIs(a, b) a es b  
+assertIsNot(a, b) a no es b  
+assertIsNone(x) x es None  
+assertIsNotNone(x) x no es None  
+assertIn(a, lista) a en lista  
+assertNotIn(a, lista) a no en lista  
+assertIsInstance(a, b) isinstance(a, b)  
+assertNotIsInstance(a, b) not isinstance(a, b)  
+
+Es importante que el nombre del método comience con test_
+```
+import unittest
+
+def concatenar(cad1, cad2):
+    return cad1 + ' ' + cad2
+
+class miClase(unittest.TestCase):
+    def test_unMetodo(self):
+        salida = concatenar('El pollo ', 'popeye es...')
+        self.assertEqual(salida, 'El pollo popeye es...')
+
+unittest.main()
+```
+
+if y == 0:
+    raise valueError('bla bla')
