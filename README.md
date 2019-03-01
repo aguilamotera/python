@@ -250,7 +250,7 @@ miLista.insert(0, 'aa')
 del miLista[0]
 ```
 
-Quita el elemento -1 a la lista y retorna el elemento quitado 
+Quita el elemento -1 a la lista y retorna el elemento quitado. 
 ```
 miLista.pop() 
 ```
@@ -311,19 +311,28 @@ miTupla = ('b') #Obvio
 ### Diccionarios
 Equivalente a arrays asociativos, hashtable, diccionarios de vb.  
 Son pares key-valor
-```
-miDic = {} # Diccionario vacío
-miDic = {'nombre':'Marco', 'edad': 20}
-miDic['nombre']
-miDic['edad']=19
-miDic['telefono']=0
-del miDic['telefono']
 
+Diccionario vacío
+```
+miDic = {}
+```
+
+```
+miDic = {'nombre':'Marco', 'edad': 20}
 miDic = {
     'nombre': 'Marco',
     'edad': 20,
     'telefono': 0
 }
+```
+
+```
+miDic['nombre']
+miDic['edad']=19
+miDic['telefono']=0
+del miDic['telefono']
+
+
 
 # Me suena al foreach de PHP
 for k, v in miDic.items():
