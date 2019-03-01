@@ -197,6 +197,7 @@ while 'unValorRepe' in miLista:
 ```
 
 ## Estructuras de datos
+### Listas
 ```
 # El índice de una lista inicia en 0
 
@@ -244,10 +245,12 @@ for num in miLista[:3]:
     print(num)
 
 miLista2 = miLista[:] # Equivalente a copiar la lista.
+```
 
-# Tuplas
-# Las tuplas son estáticas.
-# Para definir una tubla se utilizan los paréntesis
+### Tuplas
+Las tuplas son estáticas.  
+Para definir una tubla se utilizan los paréntesis.
+```
 miTupla = (200, 300)
 print(miTupla[0])
 miTupla[0] = 4 # ¡Ojo!, no se puede porque la tupla es estática, que ya no se puede modificar.
@@ -257,12 +260,11 @@ for num in miTupla:
 
 miTupla = ('a')
 miTupla = ('b') #Obvio
-
-# Diccionarios
-#------------
-# Equivalente a arrays asociativos, hashtable, diccionarios de vb.
-# Son pares key-valor
-
+```
+### Diccionarios
+Equivalente a arrays asociativos, hashtable, diccionarios de vb.  
+Son pares key-valor
+```
 miDic = {} # Diccionario vacío
 miDic = {'nombre':'Marco', 'edad': 20}
 miDic['nombre']
