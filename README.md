@@ -129,6 +129,8 @@ varCadena.rstrip() # Quitar espacio en blanco por la derecha.
 varCadena.lstrip()
 varCadena.strip() # Equivalente al trim.
 varCadena.replace('objetivo', 'destino')
+varCadena.lower().count('textoRepetidoAContar')
+pass # Cuando no necesitas reportar nada
 ```
 
 ## Entrada y salida de información
@@ -495,5 +497,34 @@ r+ -> modo lectura y escritura.
 ```
 with open('libros.dat', 'w') as objArchivo:
     objArchivo.write("Escribiendo en un archivo")
+```
+
+```
+with open('libros.dat', 'a') as objArchivo:
+    objArchivo.write("Escribiendo en un archivo")
+```
+
+```
+import json
+num=[45, 23]
+with open('libros.json', 'w') as ojbArchivo:
+    json.dump(num, objArchivo)
+```
+
+```
+import json
+with open('libros.json') as ojbArchivo:
+    num=json.load(objArchivo)
+```
+
+FileNotFoundError  
+ZeroDivisionError
+```
+try:
+    print(7/0)
+except ZeroDivisionError:
+    sentencia
+else:
+    sentencia
 ```
 
