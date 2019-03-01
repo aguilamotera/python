@@ -324,15 +324,17 @@ miDic = {
     'edad': 20,
     'telefono': 0
 }
+
+miDic['edad']=19
+miDic['telefono']=0
 ```
 
 ```
 miDic['nombre']
-miDic['edad']=19
-miDic['telefono']=0
+```
+
+```
 del miDic['telefono']
-
-
 
 # Me suena al foreach de PHP
 for k, v in miDic.items():
