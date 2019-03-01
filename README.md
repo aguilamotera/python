@@ -196,6 +196,12 @@ while 'unValorRepe' in miLista:
 
 ```
 
+Desde 1 hasta 4
+```
+for num in range(1,5):
+    print(num)
+```
+
 ## Estructuras de datos
 ### Listas
 El índice de una lista inicia en 0.
@@ -278,10 +284,6 @@ len(miLista)
 for elemento in miLista:
     print(elemento)
     print('\nlo que sea\n')  #Esta línea está dentro del for, lo sé por la identación.
-
-# Desde 1 hasta 4
-for num in range(1,5):
-    print(num)
 
 miLista[0:3] # Retorna una lista desde el elemento 0 al 2
 miLista[:3] # Obvio
@@ -405,6 +407,16 @@ def mostrarMsg(msg, titulo):
 
 mostrarMsg(msg='hola', titulo='saludo')
 mostrarMsg(titulo='saludo', msg='hola')
+```
+
+```
+gUnaVariableGlobal=None
+
+def mostrarSaludo():
+    global gUnaVariableGlobal
+    gUnaVariableGlobal = "hola mundo"
+    print(gUnaVariableGlobal)
+
 ```
 
 ```
@@ -619,3 +631,32 @@ unittest.main()
 
 if y == 0:
     raise valueError('bla bla')
+
+```
+import enum
+from tkinter import *
+
+class Jugadores:
+    JUGADOR1=1
+    JUGADOR2=2
+
+root = Tk()
+root.title("hola mundo")
+root.resizable(1,1)
+frame = Frame(root)
+#root.iconbitmap('hola.ico')
+
+#frame.pack()
+frame.pack(fill='both', expand=1)
+frame.config(cursor="pirate")
+frame.config(bg="lightblue")
+frame.config(bd=25)
+frame.config(relief="sunken")
+frame.config(width=480, height=320)
+
+root.config(cursor="arrow")
+root.config(bg="blue")
+root.config(bd=15)
+root.config(relief="ridge")
+root.mainloop()
+```
