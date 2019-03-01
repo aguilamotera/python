@@ -148,6 +148,10 @@ respuesta = int(respuesta)
 Salida
 ```
 print('hola mundo')
+print("hola mundo")
+
+print("hola ", end="")
+print("mundo")
 ```
 
 ## Casting
@@ -200,6 +204,16 @@ Desde 1 hasta 4
 ```
 for num in range(1,5):
     print(num)
+```
+
+Do while
+```
+repetir=True
+while repetir:
+    sentencia
+    if condicion:
+        repetir=False
+
 ```
 
 ## Estructuras de datos
