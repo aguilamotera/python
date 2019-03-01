@@ -226,7 +226,7 @@ Lo mismo, pero de 2 en dos
 miLista = lista(range(2,7,2)) 
 ```
 
-Primero, que valor tiene num en el for, resp 1, potencia de 1 es 1, etc.
+Primero, en el for num se asigna 1, luego potencia de 1 es 1, etc.
 ```
 miLista = [num**2 for num in range(1,3)] 
 ```
@@ -238,9 +238,15 @@ print(miLista[1])
 
 ```
 miLista[-1] #Primer elemento desde la derecha.
+```
+
+```
 miLista[0]='A'
 miLista.append('d')
 miLista.insert(0, 'aa')
+```
+
+```
 del miLista[0]
 ```
 
