@@ -198,17 +198,27 @@ while 'unValorRepe' in miLista:
 
 ## Estructuras de datos
 ### Listas
+El índice de una lista inicia en 0
 ```
-# El índice de una lista inicia en 0
-
 miLista = [1, 2, 3]
 min(miLista)
 max(miLista)
 sum(miLista)
+```
 
-miLista = list(range(1,6)) # Valor de los elementos 1 hasta 5
-miLista = lista(range(2,7,2)) # Lo mismo, pero de 2 en dos
-miLista = [num**2 for num in range(1,3)] # Primero, que valor tiene num en el for, resp 1, potencia de 1 es 1, etc.
+Valor de los elementos 1 hasta 5
+```
+miLista = list(range(1,6)) 
+```
+
+Lo mismo, pero de 2 en dos
+```
+miLista = lista(range(2,7,2)) 
+```
+
+Primero, que valor tiene num en el for, resp 1, potencia de 1 es 1, etc.
+```
+miLista = [num**2 for num in range(1,3)] 
 
 miLista=[] #Lista vacía.
 miLista = ['a', 'b', 'c']
