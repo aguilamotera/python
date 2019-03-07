@@ -674,3 +674,25 @@ root.config(bd=15)
 root.config(relief="ridge")
 root.mainloop()
 ```
+
+## Hilos
+```
+import tkinter
+import threading
+import time
+
+class CHilo:
+    def __init__(self, master):
+        self.hilo1 = threading.Thread(target=self.ejecutarHilo)
+        self.hilo1.start()
+        print("adios mundo")
+    
+    def ejecutarHilo(self):
+        time.sleep(5)
+        print("Hola mundo")
+        pass
+
+root = tkinter.Tk()
+unHilo = CHilo(root)
+root.mainloop()
+```
