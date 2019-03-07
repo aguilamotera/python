@@ -725,7 +725,7 @@ class CHilo:
         #time.sleep(5)
         while not exit.is_set():
             #sentencias
-            exit.wait(15)
+            exit.wait(15) # Simulación de sentencias.
 
         print("Hola mundo")
         self.corriendo -= 1
