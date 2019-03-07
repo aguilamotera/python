@@ -699,7 +699,7 @@ unHilo = CHilo(root)
 root.mainloop()
 ```
 
-### Queue
+### gQueue
 
 La traduducción de queue es cola, permite trabajar con colas de manera sencilla. Es generalmente utilizado en programas multihilo, ya que provee una forma de intercambiar información entre hthreads de manera segura.
 
