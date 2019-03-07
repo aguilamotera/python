@@ -698,3 +698,22 @@ root = tkinter.Tk()
 unHilo = CHilo(root)
 root.mainloop()
 ```
+
+La traduducción de queue es cola, permite trabajar con colas de manera sencilla. Es generalmente utilizado en programas multihilo, ya que provee una forma de intercambiar información entre hthreads de manera segura.
+
+```
+gzise() # Retorna el tamaño aproximado de la cola.
+empty() # Retorna True si la cola se encuentra vacía.
+full() 
+```
+
+Inserta item en la cola. Si block es True, timeout es None y la cola está llena, la función espera a que se libere un esapcio para poder hacerlo. Si timeout es un número positivo, la función espera hasta dicho número en segundo y lanza la excepción Full si un espacio no se liberó en el lapso de tiempo. Si block es False, inserta item si inmediatemnte hay un espacio libre; de lo cantratio lanza Full.
+```
+put(item, bock=True, timeout=None) 
+```
+
+Remueve y retorna un ítem de la cola.
+```
+get(block=True, timeout=None)
+```
+Fuente: https://recursospython.com/guias-y-manuales/colas-con-el-modulo-queue/
