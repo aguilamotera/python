@@ -676,6 +676,7 @@ root.mainloop()
 ```
 
 ## Hilos
+La salida es la siguiente: "adios mundo" y luego "Hola mundo"
 ```
 import tkinter
 import threading
