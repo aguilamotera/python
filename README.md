@@ -699,7 +699,7 @@ unHilo = CHilo(root)
 root.mainloop()
 ```
 
-# gQueue
+# Queue
 
 La traduducción de queue es cola, permite trabajar con colas de manera sencilla. Es generalmente utilizado en programas multihilo, ya que provee una forma de intercambiar información entre hthreads de manera segura.
 
@@ -719,3 +719,5 @@ Remueve y retorna un ítem de la cola.
 get(block=True, timeout=None)
 ```
 Fuente: https://recursospython.com/guias-y-manuales/colas-con-el-modulo-queue/
+
+## hola
