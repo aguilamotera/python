@@ -700,6 +700,52 @@ unHilo = CHilo(root)
 root.mainloop()
 ```
 
+Tenemos dos hilos, al cerrar la ventana los hilos también terminan.
+```
+import tkinter
+import threading
+from threading import Event
+import time
+
+exit = Event()
+
+class CHilo:
+    def __init__(self, master):
+        self.corriendo = 1
+        self.hilo1 = threading.Thread(target=self.ejecutarHilo)
+        self.hilo1.start()
+
+        self.corriendo += 1
+        self.hilo2 = threading.Thread(target=self.ejecutarHilo2)
+        self.hilo2.start()
+
+        print("adios mundo")
+    
+    def ejecutarHilo(self):
+        #time.sleep(5)
+        while not exit.is_set():
+            #sentencias
+            exit.wait(15)
+
+        print("Hola mundo")
+        self.corriendo -= 1
+
+    def ejecutarHilo2(self):
+        while self.corriendo > 1:
+            pass
+        print("Hilo 1 y 2 han terminado")
+        self.corriendo -= 1
+        
+    def cerrarApp(self):
+        self.corriendo = 0
+        exit.set()
+        root.destroy()
+
+root = tkinter.Tk()
+unHilo = CHilo(root)
+root.protocol("WM_DELETE_WINDOW", unHilo.cerrarApp)
+root.mainloop()
+```
 
 ### Queue
 La traduducción de queue es cola, permite trabajar con colas de manera sencilla. Es generalmente utilizado en programas multihilo, ya que provee una forma de intercambiar información entre hthreads de manera segura.
