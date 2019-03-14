@@ -340,6 +340,9 @@ main()
 ```
 import gc
 
+class Envoltorio:
+    pass
+
 class Elemento:
     def __init__(self):
         self.dato = None
@@ -356,15 +359,11 @@ def error():
     print("Insuficiente memoria")
     #exit(1)
 
-# Queda pendiente hacerlo por paso por ref, no mola con return.
-def aniadirAlPrincipio(e, lista):
-    p = lista
+def aniadirAlPrincipio(e, _):
     q = nuevoElemento()
     q.dato = e
-    q.siguiente = p
-    p = q
-    #lista = p
-    return p
+    q.siguiente = _.llse
+    _.llse = q
 
 def obtener(i, q):
     n = 0
@@ -385,22 +384,23 @@ def obtener(i, q):
     return None
 #end def
 
-def borrarTodos(lista):
-    p = lista
+def borrarTodos(_):
+    p = _.llse
     q = None
     while p != None:
         q = p
         p = p.siguiente
         gc.collect
     #end while
-    lista = None
-    return lista
+    _.llse = None
 #end def
 
 def main():
+    _ = Envoltorio()
+    _.llse = None
+
     repetir = True
     i = 0
-    llse = None
     n = None #int
     d = ""
     
@@ -413,26 +413,26 @@ def main():
         else:
             try:
                 n = int(d)
-                llse = aniadirAlPrincipio(n, llse)
+                aniadirAlPrincipio(n, _)
             except:
                 print("No es un entero.")
             #finally:
     
-    n = obtener(i, llse)
+    n = obtener(i, _.llse)
     while n != None:
         print(str(n))
         i += 1
-        n = obtener(i, llse)
+        n = obtener(i, _.llse)
     #end while
 
     i = 0
-    n = obtener(i, llse)
+    n = obtener(i, _.llse)
     while n != None:
         del n
         gc.collect
         i += 1
-        n = obtener(i, llse)
+        n = obtener(i, _.llse)
     #end while
-    llse = borrarTodos(llse)
+    borrarTodos(_)
 main()
 ```

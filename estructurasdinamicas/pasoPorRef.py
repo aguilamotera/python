@@ -5,35 +5,25 @@ class Envoltorio:
 
 class Elemento:
     def __init__(self):
-        self.dato = 0 # int
-        self.siguiente=None # Elemento.
+        self.dato = None
+        self.siguiente = None # Elemento.
 
 def nuevoElemento():
-    return Elemento()
+    q = Elemento()
+    #if q == None:
+    #    error()
+    return q
 
+# Queda pendiente hacer el equivalente.
 def error():
-    pass
+    print("Insuficiente memoria")
+    #exit(1)
 
-def aniadirAlPrincipio(n, _):
+def aniadirAlPrincipio(e, _):
     q = nuevoElemento()
-    q.dato = n
+    q.dato = e
     q.siguiente = _.llse
     _.llse = q
-
-def mostrarTodos(_):
-    q = _.llse
-    while q != None:
-        print(str(q.dato))
-        q = q.siguiente
-
-def borrarTodos(_):
-    p = _.llse
-    q = None
-    while p != None:
-        q = p
-        p = p.siguiente
-        gc.collect
-    _.llse = p
 
 def obtener(i, q):
     n = 0
@@ -46,11 +36,23 @@ def obtener(i, q):
         while q != None and n < i:
             q = q.siguiente
             n+=1
+        #end while
 
         if q != None:
-            return q
+            return q.dato
     #end if
     return None
+#end def
+
+def borrarTodos(_):
+    p = _.llse
+    q = None
+    while p != None:
+        q = p
+        p = p.siguiente
+        gc.collect
+    #end while
+    _.llse = None
 #end def
 
 def main():
@@ -58,31 +60,38 @@ def main():
     _.llse = None
 
     repetir = True
-    n = 0
     i = 0
-
+    n = None #int
+    d = ""
+    
     print("Introducir datos.")
     while repetir:
-        n = input("dato: ")
+        d = input("dato: ")
         
-        if n == "s":
+        if d == "s":
             repetir = False
         else:
             try:
-                n = int(n)
+                n = int(d)
                 aniadirAlPrincipio(n, _)
             except:
                 print("No es un entero.")
             #finally:
     
-    #mostrarTodos(llse)
-    q = obtener(i, _.llse)
-    while q != None:
-        print(str(q.dato))
+    n = obtener(i, _.llse)
+    while n != None:
+        print(str(n))
         i += 1
-        q = obtener(i, _.llse)
+        n = obtener(i, _.llse)
     #end while
 
+    i = 0
+    n = obtener(i, _.llse)
+    while n != None:
+        del n
+        gc.collect
+        i += 1
+        n = obtener(i, _.llse)
+    #end while
     borrarTodos(_)
-    mostrarTodos(_)
 main()
