@@ -52,6 +52,8 @@ def main():
 
 main()
 ```
+Una posible solución es, no reasignar el paso por referencia.
+
 
 ```
 import gc
