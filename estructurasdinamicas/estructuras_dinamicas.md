@@ -1,6 +1,6 @@
-### Paso por referencia
+## Paso por referencia
 
-## Caso 1
+### Caso 1
 La salida que obtenemos es: hola
 ```
 def funcA(var):
@@ -32,7 +32,7 @@ def main():
 main()
 ```
 
-## Caso 2
+### Caso 2
 Similar al caso 1, la salida obtenida es hola
 ```
 class Pruebas:
