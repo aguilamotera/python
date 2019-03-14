@@ -74,21 +74,26 @@ main()
 ```
 
 # Listas, arboles y grafos.
+No hace falta el envoltorio, lo puse para preparar el camino al paso por referencia.
 ```
 import gc
 
+class Envoltorio:
+    pass
+
 class Elemento:
     def __init__(self):
-        self.siguiente=None # Siguiente elemento.
+        self.siguiente=None # Siguiente Elemento.
 
 def nuevoElemento():
     return Elemento()
 
 def main():
-    p = None
-    p = nuevoElemento()
-    p.siguiente = None
-    p = None
+    _ = Envoltorio()
+    _.p = None
+    _.p = nuevoElemento()
+    _.p.siguiente = None
+    _.p = None
     gc.collect
 
 main()
@@ -97,46 +102,55 @@ main()
 ```
 import gc
 
+class Envoltorio:
+    pass
+
 class Elemento:
     def __init__(self):
-        self.siguiente=None # Siguiente elemento.
+        self.siguiente=None # Siguiente Elemento.
 
 def nuevoElemento():
     return Elemento()
 
 def main():
-    p = None
-    q = None
+    _ = Envoltorio()
+    _.q = None
+    _.p = None
 
-    p = nuevoElemento()
-    q = nuevoElemento()
-    q.siguiente = p
-    p = q
+    _.q = nuevoElemento()
+    _.p = nuevoElemento()
+    
+    _.q.siguiente = _.p
+    _.p = _.q
     gc.collect
 
-    q=q.siguiente
-    print(q)
+    _.q = _.q.siguiente
+    print(_.q)
 
-    q=q.siguiente
-    print(q)
+    _.q = _.q.siguiente
+    print(_.q)
 
 main()
 ```
 
 ```
 import gc
+
+class Envoltorio:
+    pass
 
 class Elemento:
     def __init__(self):
         self.dato = 0 # int
-        self.siguiente=None # Siguiente elemento.
+        self.siguiente=None # Siguiente Elemento.
 
 def nuevoElemento():
     return Elemento()
 
 def main():
-    p = None
-    q = None
+    _ = Envoltorio()
+    _.p = None
+    _.q = None
     n = 0
     repetir = True
 
@@ -151,10 +165,10 @@ def main():
             try:
                 n = int(n)
 
-                q = nuevoElemento()
-                q.dato = n
-                q.siguiente = p
-                p = q
+                _.q = nuevoElemento()
+                _.q.dato = n
+                _.q.siguiente = _.p
+                _.p = _.q
             except:
                 print("No es un entero.")
             #finally:
@@ -165,9 +179,11 @@ def main():
 main()
 ```
 
-Por cuestiones de tiempo he dejado pendiente el tema de paso por refe y queda optimizar algo por ahí.
 ```
 import gc
+
+class Envoltorio:
+    pass
 
 class Elemento:
     def __init__(self):
@@ -180,33 +196,34 @@ def nuevoElemento():
 def error():
     pass
 
-def aniadirAlPrincipio(n, lista):
-    p = lista
+def aniadirAlPrincipio(n, _):
+    p = _.listaLinealSimpleEnlazada
     q = nuevoElemento()
     q.dato = n
     q.siguiente = p
     p = q
-    lista = p
-    return lista
+    _.listaLinealSimpleEnlazada = p
 
-def mostrarTodos(p):
-    q = p
+def mostrarTodos(_):
+    q = _.listaLinealSimpleEnlazada
     while q != None:
         print(str(q.dato))
         q = q.siguiente
 
-def borrarTodos(p):
+def borrarTodos(_):
+    p = _.listaLinealSimpleEnlazada
     q = None
     while p != None:
         q = p
         p = p.siguiente
         gc.collect
-    return p
+    _.listaLinealSimpleEnlazada = p
 
 
 def main():
+    _ = Envoltorio()
+    _.listaLinealSimpleEnlazada = None
     repetir = True
-    listaLinealSimpleEnlazada = None
     n = 0
 
     print("Introducir datos.")
@@ -218,14 +235,14 @@ def main():
         else:
             try:
                 n = int(n)
-                listaLinealSimpleEnlazada = aniadirAlPrincipio(n, listaLinealSimpleEnlazada)
+                aniadirAlPrincipio(n, _)
             except:
                 print("No es un entero.")
             #finally:
     
-    mostrarTodos(listaLinealSimpleEnlazada)
-    listaLinealSimpleEnlazada = borrarTodos(listaLinealSimpleEnlazada)
-    #mostrarTodos(listaLinealSimpleEnlazada)
+    mostrarTodos(_)
+    borrarTodos(_)
+    mostrarTodos(_)
 main()
 ```
 
