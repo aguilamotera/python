@@ -2,25 +2,38 @@ import gc
 
 class S:
     def __init__(self):
+        self.dato = 0 # int
         self.siguiente=None # Siguiente elemento.
 
-def nuevoElmento():
+def nuevoElemento():
     return S()
 
 def main():
     p = None
     q = None
+    n = 0
+    repetir = True
 
-    p = nuevoElmento()
-    q = nuevoElmento()
-    q.siguiente = p
-    p = q
-    gc.collect
+    print("Introducir datos.")
 
-    q=q.siguiente
-    print(q)
+    while repetir:
+        n = input("dato: ")
+        
+        if n == "s":
+            repetir = False
+        else:
+            try:
+                n = int(n)
 
-    q=q.siguiente
-    print(q)
+                q = nuevoElemento()
+                q.dato = n
+                q.siguiente = p
+                p = q
+            except:
+                print("No es un entero.")
+            #finally:
+           
+    
+    print("terminado")
 
 main()

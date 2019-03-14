@@ -5,12 +5,12 @@ class S:
     def __init__(self):
         self.siguiente=None # Siguiente elemento.
 
-def nuevoElmento():
+def nuevoElemento():
     return S()
 
 def main():
     p = None
-    p = nuevoElmento()
+    p = nuevoElemento()
     p.siguiente = None
     p = None
     gc.collect
@@ -25,15 +25,15 @@ class S:
     def __init__(self):
         self.siguiente=None # Siguiente elemento.
 
-def nuevoElmento():
+def nuevoElemento():
     return S()
 
 def main():
     p = None
     q = None
 
-    p = nuevoElmento()
-    q = nuevoElmento()
+    p = nuevoElemento()
+    q = nuevoElemento()
     q.siguiente = p
     p = q
     gc.collect
@@ -45,4 +45,9 @@ def main():
     print(q)
 
 main()
+```
+
+Operaciones básicas
+```
+
 ```
