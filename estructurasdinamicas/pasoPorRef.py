@@ -1,16 +1,17 @@
-class Pruebas:
+class Envoltorio:
     def __init__(self):
-        self.x = None
+        pass
 
 def funcA(obj):
-    obj = None
-    obj = Pruebas()
-    obj.x = "adios"
+    obj.hijo = None
+    obj.hijo = Envoltorio()
+    obj.hijo.x = "adios"
 
 def main():
-    p = Pruebas()
-    p.x = "hola"
+    p = Envoltorio()
+    p.hijo = Envoltorio()
+    p.hijo.x = "hola"
     funcA(p)
-    print(p.x)
+    print(p.hijo.x)
 
 main()

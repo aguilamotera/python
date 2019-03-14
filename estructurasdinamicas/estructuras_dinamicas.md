@@ -16,15 +16,15 @@ main()
 
 Una posible solución. En la salida obtendremos: adios
 ```
-class Pruebas:
+class Envoltorio:
     def __init__(self):
-        self.x = None
+        pass
 
 def funcA(obj):
     obj.x = "adios"
 
 def main():
-    p = Pruebas()
+    p = Envoltorio()
     p.x = "hola"
     funcA(p)
     print(p.x)
@@ -35,24 +35,43 @@ main()
 ### Caso 2
 Similar al caso 1, la salida obtenida es hola
 ```
-class Pruebas:
+class Envoltorio:
     def __init__(self):
-        self.x = None
+        pass
 
 def funcA(obj):
     obj = None
-    obj = Pruebas()
+    obj = Envoltorio()
     obj.x = "adios"
 
 def main():
-    p = Pruebas()
+    p = Envoltorio()
     p.x = "hola"
     funcA(p)
     print(p.x)
 
 main()
 ```
-Una posible solución es, no reasignar el paso por referencia.
+Una posible solución es, no reasignar el paso por referencia, repetir la idea de envoltorios.
+```
+class Envoltorio:
+    def __init__(self):
+        pass
+
+def funcA(obj):
+    obj.hijo = None
+    obj.hijo = Envoltorio()
+    obj.hijo.x = "adios"
+
+def main():
+    p = Envoltorio()
+    p.hijo = Envoltorio()
+    p.hijo.x = "hola"
+    funcA(p)
+    print(p.hijo.x)
+
+main()
+```
 
 # Listas, arboles y grafos.
 ```
