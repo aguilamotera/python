@@ -249,6 +249,9 @@ main()
 ```
 import gc
 
+class Envoltorio:
+    pass
+
 class Elemento:
     def __init__(self):
         self.dato = 0 # int
@@ -260,28 +263,26 @@ def nuevoElemento():
 def error():
     pass
 
-def aniadirAlPrincipio(n, lista):
-    p = lista
+def aniadirAlPrincipio(n, _):
     q = nuevoElemento()
     q.dato = n
-    q.siguiente = p
-    p = q
-    lista = p
-    return lista
+    q.siguiente = _.llse
+    _.llse = q
 
-def mostrarTodos(p):
-    q = p
+def mostrarTodos(_):
+    q = _.llse
     while q != None:
         print(str(q.dato))
         q = q.siguiente
 
-def borrarTodos(p):
+def borrarTodos(_):
+    p = _.llse
     q = None
     while p != None:
         q = p
         p = p.siguiente
         gc.collect
-    return p
+    _.llse = p
 
 def obtener(i, q):
     n = 0
@@ -302,8 +303,10 @@ def obtener(i, q):
 #end def
 
 def main():
+    _ = Envoltorio()
+    _.llse = None
+
     repetir = True
-    llse = None
     n = 0
     i = 0
 
@@ -316,21 +319,21 @@ def main():
         else:
             try:
                 n = int(n)
-                llse = aniadirAlPrincipio(n, llse)
+                aniadirAlPrincipio(n, _)
             except:
                 print("No es un entero.")
             #finally:
     
     #mostrarTodos(llse)
-    q = obtener(i, llse)
+    q = obtener(i, _.llse)
     while q != None:
         print(str(q.dato))
         i += 1
-        q = obtener(i, llse)
+        q = obtener(i, _.llse)
     #end while
 
-    llse = borrarTodos(llse)
-    #mostrarTodos(llse)
+    borrarTodos(_)
+    mostrarTodos(_)
 main()
 ```
 

@@ -15,34 +15,51 @@ def error():
     pass
 
 def aniadirAlPrincipio(n, _):
-    p = _.listaLinealSimpleEnlazada
     q = nuevoElemento()
     q.dato = n
-    q.siguiente = p
-    p = q
-    _.listaLinealSimpleEnlazada = p
+    q.siguiente = _.llse
+    _.llse = q
 
 def mostrarTodos(_):
-    q = _.listaLinealSimpleEnlazada
+    q = _.llse
     while q != None:
         print(str(q.dato))
         q = q.siguiente
 
 def borrarTodos(_):
-    p = _.listaLinealSimpleEnlazada
+    p = _.llse
     q = None
     while p != None:
         q = p
         p = p.siguiente
         gc.collect
-    _.listaLinealSimpleEnlazada = p
+    _.llse = p
 
+def obtener(i, q):
+    n = 0
+    if q == None:
+        print("Lista vacía")
+        return None
+    #end if
+
+    if i >= 0:
+        while q != None and n < i:
+            q = q.siguiente
+            n+=1
+
+        if q != None:
+            return q
+    #end if
+    return None
+#end def
 
 def main():
     _ = Envoltorio()
-    _.listaLinealSimpleEnlazada = None
+    _.llse = None
+
     repetir = True
     n = 0
+    i = 0
 
     print("Introducir datos.")
     while repetir:
@@ -58,7 +75,14 @@ def main():
                 print("No es un entero.")
             #finally:
     
-    mostrarTodos(_)
+    #mostrarTodos(llse)
+    q = obtener(i, _.llse)
+    while q != None:
+        print(str(q.dato))
+        i += 1
+        q = obtener(i, _.llse)
+    #end while
+
     borrarTodos(_)
     mostrarTodos(_)
 main()
