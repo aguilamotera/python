@@ -1,12 +1,12 @@
 ```
 import gc
 
-class S:
+class Elemento:
     def __init__(self):
         self.siguiente=None # Siguiente elemento.
 
 def nuevoElemento():
-    return S()
+    return Elemento()
 
 def main():
     p = None
@@ -21,12 +21,12 @@ main()
 ```
 import gc
 
-class S:
+class Elemento:
     def __init__(self):
         self.siguiente=None # Siguiente elemento.
 
 def nuevoElemento():
-    return S()
+    return Elemento()
 
 def main():
     p = None
@@ -50,13 +50,13 @@ main()
 ```
 import gc
 
-class S:
+class Elemento:
     def __init__(self):
         self.dato = 0 # int
         self.siguiente=None # Siguiente elemento.
 
 def nuevoElemento():
-    return S()
+    return Elemento()
 
 def main():
     p = None
