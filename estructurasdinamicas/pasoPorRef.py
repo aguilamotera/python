@@ -1,12 +1,16 @@
+class Pruebas:
+    def __init__(self):
+        self.x = None
 
-def funcA(var):
-    var = "A"
+def funcA(obj):
+    obj = None
+    obj = Pruebas()
+    obj.x = "adios"
 
-def funcB(var):
-    pass
-    
 def main():
-    x = "Hola"
-    funcA(x)
-    print(x)
+    p = Pruebas()
+    p.x = "hola"
+    funcA(p)
+    print(p.x)
+
 main()

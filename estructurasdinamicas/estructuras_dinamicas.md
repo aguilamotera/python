@@ -1,3 +1,58 @@
+###Paso por referencia
+
+## Caso 1
+La salida que obtenemos es: hola
+```
+def funcA(var):
+    var = "adios"
+    
+def main():
+    x = "hola"
+    funcA(x)
+    print(x)
+
+main()
+```
+
+Una posible solución. En la salida obtendremos: adios
+```
+class Pruebas:
+    def __init__(self):
+        self.x = None
+
+def funcA(obj):
+    obj.x = "adios"
+
+def main():
+    p = Pruebas()
+    p.x = "hola"
+    funcA(p)
+    print(p.x)
+
+main()
+```
+
+## Caso 2
+Similar al caso 1, la salida obtenida es hola
+```
+class Pruebas:
+    def __init__(self):
+        self.x = None
+
+def funcA(obj):
+    obj = None
+    obj = Pruebas()
+    obj.x = "adios"
+
+def main():
+    p = Pruebas()
+    p.x = "hola"
+    funcA(p)
+    print(p.x)
+
+main()
+```
+
 ```
 import gc
 
