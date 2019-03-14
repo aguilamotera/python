@@ -34,11 +34,29 @@ def borrarTodos(p):
         gc.collect
     return p
 
+def obtener(i, q):
+    n = 0
+    if q == None:
+        print("Lista vacía")
+        return None
+    #end if
+
+    if i >= 0:
+        while q != None and n < i:
+            q = q.siguiente
+            n+=1
+
+        if q != None:
+            return q
+    #end if
+    return None
+#end def
 
 def main():
     repetir = True
-    listaLinealSimpleEnlazada = None
+    llse = None
     n = 0
+    i = 0
 
     print("Introducir datos.")
     while repetir:
@@ -49,12 +67,19 @@ def main():
         else:
             try:
                 n = int(n)
-                listaLinealSimpleEnlazada = aniadirAlPrincipio(n, listaLinealSimpleEnlazada)
+                llse = aniadirAlPrincipio(n, llse)
             except:
                 print("No es un entero.")
             #finally:
     
-    mostrarTodos(listaLinealSimpleEnlazada)
-    listaLinealSimpleEnlazada = borrarTodos(listaLinealSimpleEnlazada)
-    #mostrarTodos(listaLinealSimpleEnlazada)
+    #mostrarTodos(llse)
+    q = obtener(i, llse)
+    while q != None:
+        print(str(q.dato))
+        i += 1
+        q = obtener(i, llse)
+    #end while
+
+    llse = borrarTodos(llse)
+    #mostrarTodos(llse)
 main()
