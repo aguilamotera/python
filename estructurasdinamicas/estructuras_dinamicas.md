@@ -31,24 +31,7 @@ def main():
 main()
 ```
 
-Lo mismo pero con más imaginación, v de value o valor, ¿por qué? porque de esta manera de un vistazo sabemos que el parámetro del procedimiento es x, en este caso por cada parámetro un envoltorio.
-```
-class Envoltorio:
-    pass
-
-def funcA(x):
-    x.v = "adios"
-
-def main():
-    x = Envoltorio()
-    x.v = "hola"
-    funcA(x)
-    print(x.v)
-
-main()
-```
-
-Cool, Oh yeah!
+Cool, Oh yeah!. Lo mismo pero con más imaginación, ¿por qué? porque de esta manera de un vistazo sabemos que el parámetro del procedimiento es x, en este caso por cada parámetro por referencia un envoltorio.
 ```
 class Envoltorio:
     def __init__(self, valor):
