@@ -1,7 +1,7 @@
 ## Paso por referencia
 
 ### Caso 1
-La salida que obtenemos es: hola
+Reasignando el parámetro, La salida que obtenemos es: hola
 ```
 def funcA(var):
     var = "adios"
@@ -31,7 +31,7 @@ def main():
 main()
 ```
 
-Cool, Oh yeah!. Lo mismo pero con más imaginación, ¿por qué? porque de esta manera de un vistazo sabemos que el parámetro del procedimiento es x, en este caso por cada parámetro por referencia un envoltorio.
+Cool, Oh yeah!. De esta manera de un vistazo sabemos que el parámetro del procedimiento es x, en este caso por cada parámetro por referencia un envoltorio.
 ```
 class Envoltorio:
     def __init__(self, valor):
@@ -44,45 +44,6 @@ def main():
     x = Envoltorio("hola")
     funcA(x)
     print(x.v)
-
-main()
-```
-
-### Caso 2
-Similar al caso 1, la salida obtenida es hola
-```
-class Envoltorio:
-    pass
-
-def funcA(env): # ref: x
-    env = None
-    env = Envoltorio()
-    env.x = "adios"
-
-def main():
-    env = Envoltorio()
-    env.x = "hola"
-    funcA(env)
-    print(env.x)
-
-main()
-```
-Una posible solución es, no reasignar el paso por referencia, repetir la idea de envoltorios.
-```
-class Envoltorio:
-    pass
-
-def funcA(env): # ref: x
-    env.obj = None
-    env.obj = Envoltorio()
-    env.obj.x = "adios"
-
-def main():
-    env = Envoltorio()
-    env.obj = Envoltorio()
-    env.obj.x = "hola"
-    funcA(env)
-    print(env.obj.x)
 
 main()
 ```

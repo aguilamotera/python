@@ -3,11 +3,12 @@ class Envoltorio:
         self.v = valor
 
 def funcA(x):
-    x.v = "adios"
+    x.v = None
+    x.v = Envoltorio("adios")
 
 def main():
-    x = Envoltorio("hola")
+    x = Envoltorio(Envoltorio("hola"))
     funcA(x)
-    print(x.v)
+    print(x.v.v)
 
 main()
