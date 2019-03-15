@@ -17,17 +17,16 @@ main()
 Una posible solución. En la salida obtendremos: adios
 ```
 class Envoltorio:
-    def __init__(self):
-        pass
+    pass
 
-def funcA(obj):
-    obj.x = "adios"
+def funcA(env): #ref: x
+    env.x = "adios"
 
 def main():
-    p = Envoltorio()
-    p.x = "hola"
-    funcA(p)
-    print(p.x)
+    env = Envoltorio()
+    env.x = "hola"
+    funcA(env)
+    print(env.x)
 
 main()
 ```
@@ -36,39 +35,37 @@ main()
 Similar al caso 1, la salida obtenida es hola
 ```
 class Envoltorio:
-    def __init__(self):
-        pass
+    pass
 
-def funcA(obj):
-    obj = None
-    obj = Envoltorio()
-    obj.x = "adios"
+def funcA(env): # ref: x
+    env = None
+    env = Envoltorio()
+    env.x = "adios"
 
 def main():
-    p = Envoltorio()
-    p.x = "hola"
-    funcA(p)
-    print(p.x)
+    env = Envoltorio()
+    env.x = "hola"
+    funcA(env)
+    print(env.x)
 
 main()
 ```
 Una posible solución es, no reasignar el paso por referencia, repetir la idea de envoltorios.
 ```
 class Envoltorio:
-    def __init__(self):
-        pass
+    pass
 
-def funcA(obj):
-    obj.hijo = None
-    obj.hijo = Envoltorio()
-    obj.hijo.x = "adios"
+def funcA(env): # ref: x
+    env.obj = None
+    env.obj = Envoltorio()
+    env.obj.x = "adios"
 
 def main():
-    p = Envoltorio()
-    p.hijo = Envoltorio()
-    p.hijo.x = "hola"
-    funcA(p)
-    print(p.hijo.x)
+    env = Envoltorio()
+    env.obj = Envoltorio()
+    env.obj.x = "hola"
+    funcA(env)
+    print(env.obj.x)
 
 main()
 ```

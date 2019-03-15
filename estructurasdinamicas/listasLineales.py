@@ -3,95 +3,85 @@ import gc
 class Envoltorio:
     pass
 
-class Elemento:
+class Nodo:
     def __init__(self):
-        self.dato = None
-        self.siguiente = None # Elemento.
+        self.elemento = None
+        self.sig = None
 
-def nuevoElemento():
-    q = Elemento()
-    #if q == None:
-    #    error()
-    return q
+def reservar():
+    return Nodo()
 
-# Queda pendiente hacer el equivalente.
-def error():
-    print("Insuficiente memoria")
-    #exit(1)
+def insertar(_, elemento):
+    auxi = None
+    auxi = reservar()
+    auxi.elemento = elemento
+    if _.anterior == None:
+        auxi.sig = _.inic
+        _.inic = auxi
+    else:
+        auxi.sig = _.anterior.sig
+        _.anterior.sig = auxi
 
-def aniadirAlPrincipio(e, _):
-    q = nuevoElemento()
-    q.dato = e
-    q.siguiente = _.llse
-    _.llse = q
+    _.anterior = auxi
 
-def obtener(i, q):
-    n = 0
-    if q == None:
-        print("Lista vacía")
-        return None
-    #end if
+def inicializar(_):
+    _.inic = None
 
-    if i >= 0:
-        while q != None and n < i:
-            q = q.siguiente
-            n+=1
-        #end while
+def vacia(_):
+    _.inic = None
 
-        if q != None:
-            return q.dato
-    #end if
-    return None
-#end def
+def suprimir(_):
+    if _.anterior == None:
+        _.inic = _.posic.sig
+    else:
+        _.anterior.sig = _.pos.sig
 
-def borrarTodos(_):
-    p = _.llse
-    q = None
-    while p != None:
-        q = p
-        p = p.siguiente
-        gc.collect
-    #end while
-    _.llse = None
-#end def
+    del _.posic
+    _.anterior = None
+    _.posic = _.inic
+
+def recorrer(_):
+    posic = _.inic
+    while posic != None:
+        print(posic.elemento)
+        posic = posic.sig
+
+def contar(_):
+    _.n = 0
+    p = _.primero
+
+def nuevaVenta(_):
+    repetir = True
+    while repetir
+        print("Introduzca * en el código para terminar")
+        input("Código: ")
+        
+
 
 def main():
     _ = Envoltorio()
-    _.llse = None
-
+    #_.inic = None
+    _.posic = None
+    _.anterior = None
+    #elemento = None
+    #encontrado = False
+    inicializar(_)
+    #insertar(_,1)
     repetir = True
-    i = 0
-    n = None #int
-    d = ""
-    
-    print("Introducir datos.")
     while repetir:
-        d = input("dato: ")
-        
-        if d == "s":
+        print("1.- Ventas")
+        print("2.- Devoluciones")
+        print("3.- Mostrar lista")
+        print("4.- Fin")
+        opcion = input("Elija opción: ")
+        if opcion == "1":
+            pass
+        elif opcion == "2":
+            pass
+        elif opcion == "3":
+            #recorrer(_.inic, )
+            pass
+        elif opcion == "4":
             repetir = False
-        else:
-            try:
-                n = int(d)
-                aniadirAlPrincipio(n, _)
-            except:
-                print("No es un entero.")
-            #finally:
-    
-    n = obtener(i, _.llse)
-    while n != None:
-        print(str(n))
-        i += 1
-        n = obtener(i, _.llse)
-    #end while
 
-    i = 0
-    n = obtener(i, _.llse)
-    while n != None:
-        del n
-        gc.collect
-        i += 1
-        n = obtener(i, _.llse)
-    #end while
-    borrarTodos(_)
 main()
