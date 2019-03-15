@@ -1,16 +1,13 @@
 class Envoltorio:
-    pass
+    def __init__(self, valor):
+        self.v = valor
 
-def funcA(env): # ref: x
-    env.obj = None
-    env.obj = Envoltorio()
-    env.obj.x = "adios"
+def funcA(x):
+    x.v = "adios"
 
 def main():
-    env = Envoltorio()
-    env.obj = Envoltorio()
-    env.obj.x = "hola"
-    funcA(env)
-    print(env.obj.x)
+    x = Envoltorio("hola")
+    funcA(x)
+    print(x.v)
 
 main()

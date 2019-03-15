@@ -14,7 +14,7 @@ def main():
 main()
 ```
 
-Una posible solución. En la salida obtendremos: adios
+Una posible solución. En la salida obtendremos: adios.
 ```
 class Envoltorio:
     pass
@@ -27,6 +27,40 @@ def main():
     env.x = "hola"
     funcA(env)
     print(env.x)
+
+main()
+```
+
+Lo mismo pero con más imaginación, v de value o valor, ¿por qué? porque de esta manera de un vistazo sabemos que el parámetro del procedimiento es x, en este caso por cada parámetro un envoltorio.
+```
+class Envoltorio:
+    pass
+
+def funcA(x):
+    x.v = "adios"
+
+def main():
+    x = Envoltorio()
+    x.v = "hola"
+    funcA(x)
+    print(x.v)
+
+main()
+```
+
+Cool, Oh yeah!
+```
+class Envoltorio:
+    def __init__(self, valor):
+        self.v = valor
+
+def funcA(x):
+    x.v = "adios"
+
+def main():
+    x = Envoltorio("hola")
+    funcA(x)
+    print(x.v)
 
 main()
 ```
