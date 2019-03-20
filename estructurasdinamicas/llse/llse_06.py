@@ -1,16 +1,21 @@
 import gc
 
+"""
+Listas lineales simplemente enlazadas (llse)
+
+Operaciones básicas:
+"""
+
 class Envoltorio:
-    pass
+    def __init__(self, valor):
+        self.v = valor
 
 class Nodo:
     def __init__(self):
-        self.elemento = None
+        self.dato = None
         self.sig = None
 
-def reservar():
-    return Nodo()
-
+# Insertar un elemento en una lista.
 def insertar(_, elemento):
     auxi = None
     auxi = reservar()
